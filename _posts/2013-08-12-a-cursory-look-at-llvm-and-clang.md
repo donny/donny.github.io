@@ -79,4 +79,4 @@ Interesting trivia: the magic number for bitcode files is `0x0b17c0de`. The tool
     $ lli -load=/System/Library/Frameworks/Foundation.framework/Versions/Current/Foundation test.bc
     2013-08-12 22:23:50.181 lli[9516:707] Hello World
 
-Well, that's it. A cursory look at LLVM and Clang. A highly recommended [article](http://www.aosabook.org/en/llvm.html) on LLVM by [Chris Lattner](http://www.nondot.org/sabre/) himself can be found in The Architecture of Open Source Applications [book](http://aosabook.org/en/index.html).
+Well, that's it. A cursory look at LLVM and Clang. More to come. Oh by the way, a highly recommended [article](http://www.aosabook.org/en/llvm.html) on LLVM by [Chris Lattner](http://www.nondot.org/sabre/) himself can be found in The Architecture of Open Source Applications [book](http://aosabook.org/en/index.html).
