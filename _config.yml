@@ -1,3 +1,32 @@
-safe: true
-lsi: false
-highlighter: rouge
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               DK
+tagline:             Ancora Imparo
+url:                 https://donny.github.io
+paginate:            1
+baseurl:             ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Donny Kurniawan
+  url:               https://twitter.com/donny_k_
+
+# Custom vars
+version:             2.0.0
+github:
+  repo:              https://github.com/donny/donny.github.io
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+  - jemoji

@@ -3,11 +3,9 @@ layout: post
 title: Quitting my job
 ---
 
-# Quitting my job
-
 I quit my job as a research fellow last year, a few weeks after I attended WWDC 2011. I liked my job, it was exciting. We were implementing a scalable debugger that can debug thousands of processes. But, being in the academic environment, the only way forward is to publish more papers and get more grants. Publish or perish, like they say. Secretly, I longed for my PhD years where I can get my hands dirty with code and build something real (something that can be used as opposed to something that can be read).
 
-I've been a long time Hacker News lurker. It has news pretty much about bleeding-edge tech, APIs, web apps, frameworks, etc. And of course, startup success stories from a company that builds Amazon EC2 load balancer to a one-man-company that builds a profitable online bingo card creator. The tech is exciting and the stories are inspiring. 
+I've been a long time Hacker News lurker. It has news pretty much about bleeding-edge tech, APIs, web apps, frameworks, etc. And of course, startup success stories from a company that builds Amazon EC2 load balancer to a one-man-company that builds a profitable online bingo card creator. The tech is exciting and the stories are inspiring.
 
 I think I want to build startups.
 
