@@ -1,2 +1,2 @@
 
-[DK](https://donny.github.io), based on [Poole](https://github.com/poole/poole).
+[DK](https://donny.github.io) (based on [Poole](https://github.com/poole/poole)).
