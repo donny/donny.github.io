@@ -9,7 +9,7 @@ Well, on Tuesday (10th of May 2016), signals were removed from Elm :scream: with
 
 Our team used [IdeaBoardz](http://www.ideaboardz.com) to conduct our retros and I thought that its UI could be improved :wink:. Thus, I decided to spend the following week after my learning to build [Elmütt](https://github.com/donny/elmutt) that is a fresh clone of IdeaBoardz written in Elm. It uses Elm 0.17 and Bootstrap 4 for the front end; and Python 2.7, Flask, Redis, and WebSocket for the back end. And it is deployable to [Heroku](https://www.heroku.com).
 
-I am really happy with Elm :thumbsup: :100: and it is such a breath of fresh air. Below is my notes that I took whilst learning about Elm. I think you should give it a go :smile:.
+I am really happy with Elm :thumbsup: :100: and it is such a breath of fresh air. Below is my notes that I took whilst learning about Elm. I think you should try Elm.
 
 ### Elm
 
