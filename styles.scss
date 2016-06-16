@@ -27,3 +27,8 @@
 @import "posts";
 @import "pagination";
 @import "message";
+
+img.emoji {
+  display: inline;
+  margin: 0 0 3px 0;
+}
