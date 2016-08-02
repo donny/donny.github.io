@@ -29,23 +29,23 @@ OpenWhisk supports action code written in Swift that will be executed in a Linux
 
 {% highlight shell %}
 	func main(args: [String:Any]) -> [String:Any] {
-	      if let name = args["name"] as? String {
-	          return [ "greeting" : "Hello \(name)!" ]
-	      } else {
-	          return [ "greeting" : "Howdy stranger!" ]
-	      }
+	  if let name = args["name"] as? String {
+	    return [ "greeting" : "Hello \(name)!" ]
+	  } else {
+	    return [ "greeting" : "Howdy stranger!" ]
+	  }
 	}
 {% endhighlight %}
 
 Note that Swift actions always consume a dictionary and produce a dictionary. You can create the OpenWhisk action by executing: `wsk action create greetSomeone greetSomeone.swift` and invoking it by executing: `wsk action invoke --blocking greetSomeone --param name Tim`
 
 {% highlight json %}
-	{
-	    "result": {
-	        "greeting": "Hello Tim!"
-	    },
-	    "status": "success",
-	    "success": true
+ {
+	  "result": {
+	      "greeting": "Hello Tim!"
+	  },
+	  "status": "success",
+	  "success": true
 	}
 {% endhighlight %}
 
@@ -53,7 +53,7 @@ The `--result` flag makes the invocation shows only the result (it requires `--b
 
 {% highlight shell %}
 	$ wsk action invoke greetSomeone --param name Tim
-	ok: invoked greetSomeone with id e106be8bf30d4eb598c8bb5141a1b00c
+  ok: invoked greetSomeone with id e106be8bf30d4eb598c8bb5141a1b00c
 	$ wsk activation result e106be8bf30d4eb598c8bb5141a1b00c
 	{
 	    "greeting": "Hello Tim!"
@@ -65,10 +65,10 @@ The `--result` flag makes the invocation shows only the result (it requires `--b
 OpenWhisk allows us to set default parameters for action invocations. As an example, we can set default parameters for the previous example: `wsk action update greetSomeone --param name Steve` and invoking it:
 
 {% highlight shell %}
-	$ wsk action invoke --blocking --result greetSomeone
-	{
-		"greeting": "Hello Steve!"
-	}
+$ wsk action invoke --blocking --result greetSomeone
+{
+	"greeting": "Hello Steve!"
+}
 {% endhighlight %}
 
 Note that it achieves the same thing as the Swift default parameters in functions although it is at a different abstraction level.
