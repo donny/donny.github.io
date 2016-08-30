@@ -29,7 +29,7 @@ There are several key concepts and terminologies in OpenWhisk:
 
 OpenWhisk supports action code written in Swift that will be executed in a Linux environment. However, be aware that the version of Swift on Linux that is used with OpenWhisk might be different with versions of Swift from stable releases of Xcode. Create the following `greetSomeone.swift`:
 
-{% highlight shell %}
+{% highlight swift %}
 func main(args: [String:Any]) -> [String:Any] {
   if let name = args["name"] as? String {
     return [ "greeting" : "Hello \(name)!" ]
