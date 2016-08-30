@@ -11,6 +11,8 @@ With OpenWhisk, developers only pay for what they use and they don’t have to m
 
 #### Getting Started
 
+We assume that the default organisation and space have been set during the IBM Bluemix account signup process.
+
 Install the `wsk` command line tool: `pip install --upgrade https://new-console.ng.bluemix.net/openwhisk/cli/download`. Set the OpenWhisk namespace and authorisation key: `wsk property set --apihost openwhisk.ng.bluemix.net --auth XXXX:XXXX --namespace "namespace_dev"` where the required information can be found on the OpenWhisk web console. Verify the setup: `wsk action invoke /whisk.system/samples/echo -p message hello --blocking --result` which performs a synchronous blocking invocation of `echo` with `hello` as an argument.
 
 #### Key Concepts
@@ -137,10 +139,10 @@ We could delete unused actions by executing `wsk action delete` with the action 
 {% highlight shell %}
 $ wsk action list
 actions
-/worqbench_dev/uppercaseSort                                      private
-/worqbench_dev/greetSomeone                                      private
-/worqbench_dev/uppercase                                             private
-/worqbench_dev/sort                                                        private
+/worqbench_dev/uppercaseSort
+/worqbench_dev/greetSomeone
+/worqbench_dev/uppercase
+/worqbench_dev/sort
 $ wsk action delete greetSomeone
 {% endhighlight %}
 
@@ -172,7 +174,7 @@ Create a trigger and confirm that it has been created:
 $ wsk trigger create eventUpdate
 $ wsk trigger list
 triggers
-/worqbench_dev/eventUpdate                                      private
+/worqbench_dev/eventUpdate
 {% endhighlight %}
 
 The above command creates a named channel to which events can be fired. We need to create a rule to observe the effect: `wsk rule create --enable myRule eventUpdate helloAction`
@@ -263,3 +265,15 @@ $ curl -X POST -H "Content-Type: application/json" --data '{"name": "Donny"}' -u
 {% endhighlight %}
 
 All OpenWhisk APIs are protected with HTTP Basic authentication. At the moment, OpenWhisk supports only one key per account. Be aware that your key would need to be embedded in client-side code making it visible to the public.
+
+#### OpenWhisk iOS SDK
+
+OpenWhisk provides an iOS SDK that allows apps to easily invoke actions and fire remote triggers. It is written in Swift 2.2 and supports iOS 9 and later versions. The SDK can be installed by using Carthage, CocoaPods, or from the source directory. We could get started by getting the starter app example, installing the dependencies, and taking a look at the code:
+
+{% highlight shell %}
+$ mkdir iOS ; cd iOS
+$ wsk sdk install iOS
+$ pod install
+{% endhighlight %}
+
+Take a look at the `ViewController.swift` file and set the OpenWhisk credentials according to the output of `wsk property get --auth`.
