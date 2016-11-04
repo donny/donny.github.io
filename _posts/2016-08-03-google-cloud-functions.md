@@ -3,8 +3,6 @@ layout: post
 title: Google Cloud Functions
 ---
 
-### Google Cloud Functions
-
 [Google Cloud Functions](https://cloud.google.com/functions) is a compute solution offering from Google that is described as lightweight and event-based. It allows you to create small, single-purpose functions that respond to cloud events without the need to manage a runtime environment or a server. Cloud Functions however is an alpha release that might be changed in backward-incompatible way and it requires the corresponding Google Cloud Platform account to be whitelisted.
 
 Cloud Functions code are written in JavaScript and executed on Google Cloud Platform in a managed Node.js environment. The code can be triggered asynchronously by events from Google Cloud Storage and Google Cloud Pub/Sub. The code can also be triggered synchronously by HTTP invocation.
